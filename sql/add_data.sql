@@ -1,0 +1,1 @@
+insert into COMMUNE values (1, 'Lorient', '56100');

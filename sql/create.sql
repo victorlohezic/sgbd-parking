@@ -8,6 +8,17 @@ create table COMMUNE (
 );
 
 -- ============================================================
+--   Table : VEHICULE                                            
+-- ============================================================
+create table VEHICULE (
+	NUMERO_IMMATRICULATION VARCHAR(9) PRIMARY KEY,
+	MARQUE VARCHAR (50) NOT NULL,
+	DATE_MISE_EN_CIRCULATION DATE NOT NULL,
+	KILOMETRAGE INT,
+	ETAT VARCHAR (50)
+);
+
+-- ============================================================
 --   Table : PARKING                                         
 -- ============================================================
 create table PARKING

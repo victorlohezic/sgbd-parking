@@ -29,3 +29,30 @@ create table PARKING
 	TARIF_HORAIRE			INT					not null,
 	constraint pk_parking primary key (ID_PARKING)
 );
+
+-- ============================================================
+--   Table : PLACE                                            
+-- ============================================================
+create table PLACE (
+	ID_PLACE serial PRIMARY KEY,
+	NUMERO_PLACE VARCHAR (7) NOT NULL,
+	NUMERO_PARKING INT NOT NULL,
+	foreign key (NUMERO_PARKING)
+		references PARKING (ID_PARKING)
+);
+
+-- ============================================================
+--   Table : TICKET                                        
+-- ============================================================
+create table TICKET (
+	ID_TICKET serial PRIMARY KEY,
+	DATE DATE NOT NULL,
+	HEURE_ENTREE TIME,
+	HEURE_SORTIE TIME,
+	NUMERO_IMMATRICULATION VARCHAR(9) NOT NULL,
+	ID_PLACE INT NOT NULL,
+	foreign key (NUMERO_IMMATRICULATION)
+		references VEHICULE (NUMERO_IMMATRICULATION),
+	foreign key (ID_PLACE)
+		references PLACE (ID_PLACE)
+);

@@ -29,9 +29,9 @@ insert into VEHICULE values ('ZT-756-PA', 'Fiat', '2007-06-21', 90000, 'mauvais'
 
 -- PARKING
 
-insert into PARKING values (1, 'Village 1', '12 Av. de Collegno', 22);
-insert into PARKING values (2, 'Village 2', '7 Av. Pey Berland', 5);
-insert into PARKING values (3, 'Village 3', '9 Esp. des Antilles', 22);
+insert into PARKING values (1, 'Village 1', '12 Av. de Collegno', 22, 1);
+insert into PARKING values (2, 'Village 2', '7 Av. Pey Berland', 5, 2);
+insert into PARKING values (3, 'Village 3', '9 Esp. des Antilles', 22, 3);
 
 
 -- PLACE

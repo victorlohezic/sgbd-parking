@@ -27,6 +27,9 @@ create table PARKING
 	NOM_PARKING				VARCHAR(50)					,
 	ADRESSE					VARCHAR(90)			not null,
 	TARIF_HORAIRE			INT					not null,
+	ID_COMMUNE				INT					not NULL,
+	foreign key (ID_COMMUNE)
+		references COMMUNE (ID_COMMUNE),
 	constraint pk_parking primary key (ID_PARKING)
 );
 

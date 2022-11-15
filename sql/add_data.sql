@@ -10,7 +10,7 @@ insert into COMMUNE values (3, 'Pessac', '33600');
 insert into COMMUNE values (4, 'Talence', '33400');
 insert into COMMUNE values (5, 'Pau', '64000');
 insert into COMMUNE values (6, 'Nimes', '30000');
-insert into COMMUNE values (7, 'Merignac', '33700');
+
 
 
 -- VEHICULE 

@@ -21,6 +21,11 @@ then
         clean)
             psql -h localhost -p 5432 -U jtb -f sql/clean.sql 
         ;;
+        reset)
+            psql -h localhost -p 5432 -U jtb -f sql/clean.sql
+            echo "pwd_jtb" | psql -h localhost -p 5432 -U jtb -f sql/create.sql
+            psql -h localhost -p 5432 -U jtb -f sql/add_data.sql
+        ;;
         help)
             echo "create : Crée la base de donnée"
             echo "add_data : Ajoute des données à la base de donnée"

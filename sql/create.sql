@@ -3,7 +3,7 @@
 -- ============================================================
 create table COMMUNE (
 	ID_COMMUNE serial PRIMARY KEY,
-	NOM VARCHAR (50) NOT NULL,
+	NOM_COMMUNE VARCHAR (50) NOT NULL,
 	CODE_POSTAL INT   NOT NULL
 );
 
@@ -25,7 +25,7 @@ create table PARKING
 (
 	ID_PARKING				INT					not null,
 	NOM_PARKING				VARCHAR(50)					,
-	ADRESSE					VARCHAR(90)			not null,
+	ADRESSE_PARKING					VARCHAR(90)			not null,
 	TARIF_HORAIRE			INT					not null,
 	ID_COMMUNE				INT					not NULL,
 	foreign key (ID_COMMUNE)
@@ -39,8 +39,8 @@ create table PARKING
 create table PLACE (
 	ID_PLACE serial PRIMARY KEY,
 	NUMERO_PLACE VARCHAR (7) NOT NULL,
-	NUMERO_PARKING INT NOT NULL,
-	foreign key (NUMERO_PARKING)
+	ID_PARKING INT NOT NULL,
+	foreign key (ID_PARKING)
 		references PARKING (ID_PARKING)
 );
 
@@ -49,7 +49,7 @@ create table PLACE (
 -- ============================================================
 create table TICKET (
 	ID_TICKET serial PRIMARY KEY,
-	DATE DATE NOT NULL,
+	DATE_TICKET DATE NOT NULL,
 	HEURE_ENTREE TIME,
 	HEURE_SORTIE TIME,
 	NUMERO_IMMATRICULATION VARCHAR(9) NOT NULL,

@@ -65,6 +65,7 @@ insert into TICKET values (3, '2022-08-02', '16:42:45','19:26:27', 'PC-967-DK',2
 insert into TICKET values (4, '2020-12-30', '09:13:27','17:49:27', 'ZT-756-PA',301);
 insert into TICKET values (5, '2022-04-14', '08:56:56','12:18:27', 'YK-966-AH',103);
 insert into TICKET values (6, '2021-09-19', '12:32:38','15:31:27', 'AO-365-HD',104);
-
-
-
+insert into TICKET values (7, '2022-04-14', '15:54:32','18:10:29', 'YK-966-AH',303);
+insert into TICKET values (8, '2022-09-19', '12:32:38','15:31:27', 'AO-365-HD',104);
+insert into TICKET values (9, '2020-12-30', '18:13:27','19:49:27', 'ZT-756-PA',305);
+insert into TICKET values (10, '2020-12-30', '20:13:27','21:49:27', 'ZT-756-PA',303);

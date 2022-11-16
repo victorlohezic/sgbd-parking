@@ -11,6 +11,9 @@ then
         add_data)
             psql -h localhost -p 5432 -U jtb -f sql/add_data.sql 
         ;;
+        select)
+            psql -h localhost -p 5432 -U jtb -f sql/select.sql 
+        ;;
         website)
             sudo cp -r website/* /var/www/html/
             firefox http://localhost/index.php &
@@ -21,6 +24,7 @@ then
         help)
             echo "create : Crée la base de donnée"
             echo "add_data : Ajoute des données à la base de donnée"
+            echo "select : Exécute les requêtes de sélection"
             echo "website : Ouvre le site web"
             echo "clean : Supprime la base de donnée"
         ;;

@@ -81,5 +81,6 @@ Les différents paramètres sont résumés dans ce tableau :
 | :--------------- | :-----|
 | create  |     Crée la base de donnée |
 | add_data  |   Ajoute des données à la base de donnée |
+| select  |   Exécute les requêtes de sélection |
 | website  |    Ouvre le site web |
 | clean  |    Supprime la base de donnée |

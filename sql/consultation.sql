@@ -65,3 +65,15 @@ having count(ID_PLACE) = (
     natural join PARKING
     where DATE_TICKET = '2020-12-30' and HEURE_SORTIE > '19:49:27' and ID_PARKING=P.ID_PARKING
 );
+
+-- Nombre de place en parking 
+select P.ID_PARKING, P.NOM_PARKING, count(*) - (
+    SELECT count(*)
+    from TICKET 
+    natural join PLACE
+    natural join PARKING
+    where DATE_TICKET = '2020-12-30' and HEURE_SORTIE > '19:49:27' and ID_PARKING=P.ID_PARKING
+)
+from PLACE
+natural join PARKING P
+group by P.NOM_PARKING, P.ID_PARKING;

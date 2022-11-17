@@ -2,17 +2,19 @@
 --    creation des donnees
 -- ============================================================
 
--- COMMUNE (20)
+-- COMMUNE
 
-insert into COMMUNE values (1, 'Bordeaux', '33000');
-insert into COMMUNE values (2, 'Lorient', '56100');
+insert into COMMUNE values (1, 'Lorient', '56100');
+insert into COMMUNE values (2, 'Bordeaux', '33000');
 insert into COMMUNE values (3, 'Pessac', '33600');
 insert into COMMUNE values (4, 'Talence', '33400');
 insert into COMMUNE values (5, 'Pau', '64000');
 insert into COMMUNE values (6, 'Nimes', '30000');
 
 
--- VEHICULE (400)
+
+-- VEHICULE 
+
 insert into VEHICULE values ('MF-246-QA','Peugeot', '2014-06-09', 20000, 'bon');
 insert into VEHICULE values ('DI-164-GD', 'Alfa Romeo', '2015-10-12', 45799, 'bon');
 insert into VEHICULE values ('OL-758-JV', 'Fiat', '2016-11-15', 20673, 'bon');
@@ -26,16 +28,14 @@ insert into VEHICULE values ('PD-158-JK', 'Peugeot', '1999-07-05', 250000, 'mauv
 insert into VEHICULE values ('ZT-756-PA', 'Fiat', '2007-06-21', 90000, 'mauvais');
 
 
--- PARKING (60)
+-- PARKING
 
-insert into PARKING values (1, 'Village 1', '12 Av. de Collegno', 22, 4);
-insert into PARKING values (2, 'Village 2', '7 Av. Pey Berland', 5, 3);
+insert into PARKING values (1, 'Village 1', '12 Av. de Collegno', 22, 1);
+insert into PARKING values (2, 'Village 2', '7 Av. Pey Berland', 5, 2);
 insert into PARKING values (3, 'Village 3', '9 Esp. des Antilles', 22, 3);
-insert into PARKING values (4, 'Station service délabrée', '14 Cr Bosquet', 22, 5);
 
 
-
--- PLACE 
+-- PLACE
 
 insert into PLACE values (101, 1, 1);
 insert into PLACE values (102, 2, 1);
@@ -57,7 +57,7 @@ insert into PLACE values (305, 5, 3);
 
 
 
--- TICKET  
+-- TICKET
 
 insert into TICKET values (1, '2021-03-07', '14:09:48','18:23:27', 'YK-966-AH',104);
 insert into TICKET values (2, '2020-11-11', '07:51:13','14:44:27', 'OL-758-JV',202);

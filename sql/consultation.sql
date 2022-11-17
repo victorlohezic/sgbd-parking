@@ -2,6 +2,18 @@
 --    Consultation
 -- ============================================================
 
+-- Informations sur les parkings
+select *
+from PARKING;
+
+-- Informations sur les voitures 
+select * 
+from VEHICULE;
+
+-- Informations sur les places 
+select * 
+from PLACE;
+
 -- Liste voitures par parking
 
 select VEHICULE, NOM_PARKING
@@ -15,6 +27,8 @@ select NOM_PARKING,ADRESSE_PARKING,NOM_COMMUNE
 from PARKING P,COMMUNE C
 where P.ID_COMMUNE = C.ID_COMMUNE;
 
+-- Liste des parkings saturés à un jour donnée
+
 -- Liste de voitures s'étant garé dans deux parkings différents la même journée
 
 select NUMERO_IMMATRICULATION, DATE_TICKET
@@ -23,6 +37,6 @@ group by NUMERO_IMMATRICULATION, DATE_TICKET having count(NUMERO_IMMATRICULATION
 
 -- Nombre de places par parking
 
-select NOM_PARKING, count(*)
-from (PARKING inner join PLACE using (ID_PARKING))
+select NOM_PARKING, count(ID_PLACE)
+from (PARKING left outer join PLACE using (ID_PARKING))
 group by NOM_PARKING;

@@ -32,6 +32,7 @@ then
             echo "select : Exécute les requêtes de sélection"
             echo "website : Ouvre le site web"
             echo "clean : Supprime la base de donnée"
+            echo "reset : Réalise clean, create, add-data"
         ;;
         *)
             echo "La commande est inconnue, pour obtenir de l'aide : ./make.sh help"

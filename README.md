@@ -84,3 +84,4 @@ Les différents paramètres sont résumés dans ce tableau :
 | select  |   Exécute les requêtes de sélection |
 | website  |    Ouvre le site web |
 | clean  |    Supprime la base de donnée |
+| reset | reset : Réalise clean, create, add-data |

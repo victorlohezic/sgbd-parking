@@ -1,22 +1,6 @@
--- select *
--- from COMMUNE;
-
--- -- Choisis la meilleur commune 
--- select *
--- from COMMUNE
--- where NOM = 'Lorient';
-
--- -- Informations parkings
--- select *
--- from PARKING;
-
--- -- Informations voitures
--- select *
--- from VEHICULE;
-
--- -- Informations places
--- select *
--- from PLACE;
+-- ============================================================
+--    Consultation
+-- ============================================================
 
 -- Liste voitures par parking
 
@@ -42,10 +26,3 @@ group by NUMERO_IMMATRICULATION, DATE_TICKET having count(NUMERO_IMMATRICULATION
 select NOM_PARKING, count(*)
 from (PARKING inner join PLACE using (ID_PARKING))
 group by NOM_PARKING;
-
--- Moyenne du nombre de places sur les parkings
-
-select avg(count)
-from (select NOM_PARKING, count(*)
-    from (PARKING inner join PLACE using (ID_PARKING))
-    group by NOM_PARKING) as SUBQUERY;

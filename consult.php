@@ -20,7 +20,7 @@
                 if($res) {
                     /* ... on récupère un tableau stockant le résultat */
                       while ($commune =  pg_fetch_assoc($res)) {
-                          echo "\t".'<tr><td>'.$commune['nom'].'</td>';
+                          echo "\t".'<tr><td>'.$commune['nom_commune'].'</td>';
                           echo '<td>'.$commune['code_postal'].'</td>';
                           echo '</tr>'."\n";
                       }

@@ -21,7 +21,7 @@ then
             psql -h localhost -p 5432 -U jtb -f sql/update.sql 
         ;;
         website)
-            sudo cp -r website/* /var/www/html/
+            sudo cp -r ./* /var/www/html/
             firefox http://localhost/index.php &
         ;;
         clean)

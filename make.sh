@@ -11,8 +11,14 @@ then
         add_data)
             psql -h localhost -p 5432 -U jtb -f sql/add_data.sql 
         ;;
-        select)
-            psql -h localhost -p 5432 -U jtb -f sql/select.sql 
+        consult)
+            psql -h localhost -p 5432 -U jtb -f sql/consultation.sql 
+        ;;
+        stat)
+            psql -h localhost -p 5432 -U jtb -f sql/stat.sql 
+        ;;
+        update)
+            psql -h localhost -p 5432 -U jtb -f sql/update.sql 
         ;;
         website)
             sudo cp -r website/* /var/www/html/
@@ -29,9 +35,12 @@ then
         help)
             echo "create : Crée la base de donnée"
             echo "add_data : Ajoute des données à la base de donnée"
-            echo "select : Exécute les requêtes de sélection"
+            echo "consult : Exécute les requêtes de consultation"
+            echo "stat : Exécute les requêtes statistiques"
+            echo "update : Exécute les requêtes de mide à jour"
             echo "website : Ouvre le site web"
             echo "clean : Supprime la base de donnée"
+            echo "reset : Réalise clean, create, add-data"
         ;;
         *)
             echo "La commande est inconnue, pour obtenir de l'aide : ./make.sh help"

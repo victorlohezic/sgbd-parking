@@ -22,7 +22,8 @@
                 </div>
             </div>
         </div>
-    <br><br>
+    <br></br>
+    <h3 class="center"> Données brutes de la BDD </h3>
     <div class="container">
         <div class="row">
             <div class="col s3 offset-s3 center">
@@ -38,6 +39,34 @@
             </div>
             <div class="col s3 center">
                 <a onClick="window.open('all_place.php')" class="btn-jtb"> Places </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6 offset-s3 center">
+                <a onClick="window.open('all_ticket.php')" class="btn-jtb"> Tickets </a>
+            </div>
+        </div>  
+    </div>
+    <br><br>
+    <h3 class="center"> Requêtes spécifiques aux parkings</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col s3 offset-s3 center">
+                <a onClick="window.open('places_par_parking.php')" class="btn-jtb"> Nombre de places par parking </a>
+            </div>
+            <div class="col s3 center">
+                <a onClick="window.open('communes_par_parking.php')" class="btn-jtb"> Nom de commune par parking </a>
+            </div>
+        </div>
+    <br><br>
+    <h3 class="center"> Requêtes spécifiques aux voitures</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col s3 offset-s3 center">
+                <a onClick="window.open('voiture_deux_parkings.php')" class="btn-jtb"> Véhicules s'étant stationnés deux fois en un jour</a>
+            </div>
+            <div class="col s3 center">
+                <a onClick="window.open('voitures_par_parkings.php')" class="btn-jtb"> Liste de voitures et leurs parking actuel (REQUETE FAUSSE) </a>
             </div>
         </div>
     </div>

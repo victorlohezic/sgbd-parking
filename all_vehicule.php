@@ -9,7 +9,7 @@
 <?php include("template/header.php"); ?>
  <body>
  <?php include("template/navbar.php"); ?>
-   <h2>Vehicules</h2>
+   <h2 class="center">Vehicules</h2>
      <?php
     include "connect.php"; /* Le fichier connect.php contient les identifiants de connexion */
      ?>
@@ -19,6 +19,8 @@
                 <tr>
               <th>Immatriculation</th>
               <th>Marque</th>
+              <th>Date de mise en circulation</th>
+              <th>Kilométrage</th>
               <th>Etat</th>
                 </tr>
           <?php
@@ -30,6 +32,8 @@
                       while ($vehicule =  pg_fetch_assoc($res)) {
                           echo "\t".'<tr><td>'.$vehicule['numero_immatriculation'].'</td>';
                           echo '<td>'.$vehicule['marque'].'</td>';
+                          echo '<td>'.$vehicule['date_mise_en_circulation'].'</td>';
+                          echo '<td>'.$vehicule['kilometrage'].'</td>';
                           echo '<td>'.$vehicule['etat'].'</td>';
                           echo '</tr>'."\n";
                       }

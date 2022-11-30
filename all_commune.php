@@ -9,7 +9,7 @@
 <?php include("template/header.php"); ?>
  <body>
  <?php include("template/navbar.php"); ?>
-   <h2>Communes</h2>
+   <h2 class="center">Communes</h2>
      <?php
     include "connect.php"; /* Le fichier connect.php contient les identifiants de connexion */
      ?>
@@ -17,6 +17,7 @@
      <div class="row">
             <table class="col s8 m8 offset-s2 offset-m2">
                 <tr>
+              <th>ID Commuune</th>
               <th>Nom</th>
               <th>Code Postal</th>
                 </tr>
@@ -27,7 +28,8 @@
                 if($res) {
                     /* ... on récupère un tableau stockant le résultat */
                       while ($commune =  pg_fetch_assoc($res)) {
-                          echo "\t".'<tr><td>'.$commune['nom_commune'].'</td>';
+                          echo "\t".'<tr><td>'.$commune['id_commune'].'</td>';
+                          echo '<td>'.$commune['nom_commune'].'</td>';
                           echo '<td>'.$commune['code_postal'].'</td>';
                           echo '</tr>'."\n";
                       }

@@ -15,7 +15,7 @@ then
             psql -h localhost -p 5432 -U jtb -f sql/consultation.sql 
         ;;
         stat)
-            psql -h localhost -p 5432 -U jtb -f sql/stat.sql 
+            psql -h localhost -p 5432 -U jtb -f sql/requests/stats/stat.sql 
         ;;
         update)
             psql -h localhost -p 5432 -U jtb -f sql/update.sql 

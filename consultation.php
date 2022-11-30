@@ -25,27 +25,24 @@
     <br><br>
     <div class="container">
         <div class="row">
-            <div class="col s12 center">
-                <div class="ctrljtb-group center">
-                    <label class="ctrljtb ctrljtb-radio">
-                        Communes
-                            <input type="radio" name="radio" checked="checked" />
-                        <div class="ctrljtb_indicator"></div>
-                    </label>
-                    <label class="ctrljtb ctrljtb-radio">
-                        Parkings
-                            <input type="radio" name="radio" />
-                        <div class="ctrljtb_indicator"></div>
-                    </label>
-                    <label class="ctrljtb ctrljtb-radio">
-                        Vehicules
-                            <input type="radio" name="radio"/>
-                        <div class="ctrljtb_indicator"></div>
-                    </label>
-                </div>
+            <div class="col s3 offset-s3 center">
+                <a onClick="window.open('all_commune.php')" class="btn-jtb"> Communes </a>
+            </div>
+            <div class="col s3 center">
+                <a onClick="window.open('all_parking.php')" class="btn-jtb"> Parkings </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s3 offset-s3 center">
+                <a onClick="window.open('all_vehicule.php')" class="btn-jtb"> Vehicules </a>
+            </div>
+            <div class="col s3 center">
+                <a onClick="window.open('all_place.php')" class="btn-jtb"> Places </a>
             </div>
         </div>
     </div>
+    <br><br>
+
    <?php include("template/footer.php"); ?>
 
 

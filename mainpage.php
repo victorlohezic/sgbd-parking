@@ -18,6 +18,9 @@
     $creation=file_get_contents('sql/create.sql');
     /* Execution d'une requete multiple */
         $creresult=pg_query($connection, $creation);
+    $adddata=file_get_contents('sql/add_data.sql');
+    /* Execution d'une requete multiple */
+        $addresult=pg_query($connection, $adddata);
      ?>
      <?php if($rmvresult==false) :?>
         <div class="row">
@@ -40,6 +43,20 @@
                 <div class="card-content white-text">
                 <span class="card-title">Erreur</span>
                 <span class="card-title">Echec de lecture de la query</span>
+                </div>
+                <div class="card-action">
+                <a href="/index.php">Revenir à la page d'accueil</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    <?php elseif($addresult === false) : ?>
+        <div class="row">
+            <div class="col s12 s4 m4 offset-s4 offset-m4">
+            <div class="card red darken-1">
+                <div class="card-content white-text">
+                <span class="card-title">Erreur</span>
+                <span class="card-title">Echec d'ajout des données'</span>
                 </div>
                 <div class="card-action">
                 <a href="/index.php">Revenir à la page d'accueil</a>

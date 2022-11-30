@@ -60,7 +60,6 @@
         </div>
     <br><br>
     <h3 class="center"> Requêtes spécifiques aux voitures</h3>
-    <div class="container">
         <div class="row">
             <div class="col s3 offset-s3 center">
                 <a onClick="window.open('voiture_deux_parkings.php')" class="btn-jtb"> Véhicules s'étant stationnés deux fois en un jour</a>
@@ -70,6 +69,7 @@
             </div>
         </div>
     </div>
+</div>
     <br><br>
 
    <?php include("template/footer.php"); ?>

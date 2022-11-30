@@ -12,7 +12,7 @@ from (select NOM_PARKING, count(ID_PLACE)
 -- la duree moyenne de stationnement d'un vehicule par parking
 -- (requete imbriquee) donne le parking et le temps de stationnement pour chaque ticket
 select ID_PARKING, (HEURE_SORTIE-HEURE_ENTREE) as DUREE 
-    from TICKET inner join PLACE using(ID_PLACE)
+    from TICKET inner join PLACE using(ID_PLACE);
 
 select ID_PARKING, avg(DUREE)
 from (select ID_PARKING, (HEURE_SORTIE-HEURE_ENTREE) as DUREE 

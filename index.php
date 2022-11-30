@@ -13,49 +13,29 @@
         <h5 class="header col s12 light">Un gestionnaire de Parking OpenSource et Libre</h5>
       </div>
       <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button"
-          class="btn-large waves-effect waves-light orange">Get Started</a>
+        <a href="mainpage.php"
+          class="btn-jtb">Démarrer la base de données</a>
       </div>
       <br><br>
 
     </div>
   </div>
 
-
   <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <a href="create.php" 
-              class="btn-large waves-effect waves-light light-blue">Créer la base de données</a>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <a href="add_data.php" class="btn-large waves-effect waves-light light-blue">Ajouter des données</a>
-          </div>
-        </div>
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <a href="remove.php" class="btn-large waves-effect waves-light light-blue">Supprimer des données</a>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="row">
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <a href="consult.php"
-            class="btn-large waves-effect waves-light light-blue">Consulter les communes</a>
-        </div>
+
+      <div class="col s4 center">
+        <img src="gear.png" width="100" height="100">
+      </div>
+      <div class="col s4 center">
+        <img src="gear.png" width="100" height="100">
+      </div>
+      <div class="col s4 center">
+        <img src="gear.png" width="100" height="100">
       </div>
     </div>
   </div>
-    <br><br>
-  </div>
+
   <?php include("template/footer.php"); ?>
 
 

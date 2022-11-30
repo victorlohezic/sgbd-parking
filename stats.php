@@ -23,49 +23,38 @@
             </div>
         </div>
     <br></br>
-    <h3 class="center"> Données brutes de la BDD </h3>
+    <h3 class="center">Requêtes spécifiques aux parkings</h3>
     <div class="container">
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="window.open('all_commune.php')" class="btn-jtb"> Communes </a>
+                <a onClick="window.open('moyenne_nombre_place_par_parking.php')" class="btn-jtb">Moyenne du nombre de places disponibles par parking</a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('all_parking.php')" class="btn-jtb"> Parkings </a>
+                <a onClick="window.open('all_parking.php')" class="btn-jtb red">Durée moyenne de stationnement d'un véhicule par parking</a>
             </div>
         </div>
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="window.open('all_vehicule.php')" class="btn-jtb"> Vehicules </a>
+                <a onClick="window.open('parking_moins_utilises.php')" class="btn-jtb">Classement des parkings les moins utilisés</a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('all_place.php')" class="btn-jtb"> Places </a>
+                <a onClick="window.open('all_place.php')" class="btn-jtb red">Classement des parkings les plus rentables par commune et par mois</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col s6 offset-s3 center">
-                <a onClick="window.open('all_ticket.php')" class="btn-jtb"> Tickets </a>
-            </div>
-        </div>  
     </div>
     <br><br>
-    <h3 class="center"> Requêtes spécifiques aux parkings</h3>
+    <h3 class="center"> Requête spécifique aux Véhicules</h3>
     <div class="container">
         <div class="row">
-            <div class="col s3 offset-s3 center">
-                <a onClick="window.open('places_par_parking.php')" class="btn-jtb"> Nombre de places par parking </a>
-            </div>
-            <div class="col s3 center">
-                <a onClick="window.open('communes_par_parking.php')" class="btn-jtb"> Nom de commune par parking </a>
+        <div class="col s4 offset-s4 center">
+                <a onClick="window.open('all_place.php')" class="btn-jtb red">Coûts moyen du stationnement d’un véhicule par mois</a>
             </div>
         </div>
     <br><br>
-    <h3 class="center"> Requêtes spécifiques aux voitures</h3>
+    <h3 class="center"> Requêtes spécifiques aux communes</h3>
         <div class="row">
-            <div class="col s3 offset-s3 center">
-                <a onClick="window.open('voiture_deux_parkings.php')" class="btn-jtb"> Véhicules s'étant stationnés deux fois en un jour</a>
-            </div>
-            <div class="col s3 center">
-                <a onClick="window.open('voitures_par_parkings.php')" class="btn-jtb"> Liste de voitures et leurs parking actuel (REQUETE FAUSSE) </a>
+        <div class="col s4 offset-s4 center">
+                <a onClick="window.open('all_place.php')" class="btn-jtb red">Classement des communes les plus demandés par semaine</a>
             </div>
         </div>
     </div>

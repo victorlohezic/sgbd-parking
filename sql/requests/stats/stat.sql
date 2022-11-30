@@ -35,8 +35,8 @@ select DATE_TICKET, (TARIF_HORAIRE*(date_part('hour', HEURE_SORTIE-HEURE_ENTREE)
 -- les parkings les moins utilisés
 select NOM_PARKING, count(ID_TICKET) as NOMBRE_TICKET
 from PARKING
-natural join PLACE
-natural join TICKET
+left outer join PLACE using(ID_PARKING)
+left outer join TICKET using(ID_PLACE)
 group by ID_PARKING
 order by count(ID_TICKET) asc;
 

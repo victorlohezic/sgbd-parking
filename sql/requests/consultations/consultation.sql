@@ -27,7 +27,6 @@ select NOM_PARKING,ADRESSE_PARKING,NOM_COMMUNE
 from PARKING P,COMMUNE C
 where P.ID_COMMUNE = C.ID_COMMUNE;
 
-
 -- Liste de voitures s'étant garé dans deux parkings différents la même journée
 
 select NUMERO_IMMATRICULATION, DATE_TICKET

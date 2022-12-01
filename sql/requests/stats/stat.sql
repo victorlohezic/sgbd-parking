@@ -50,6 +50,19 @@ order by count(ID_TICKET) asc;
 
 -- group by NOM_COMMUNE
 
+-- les communes les plus demandées
+
+select NOM_COMMUNE, NOMBRE_TICKET
+from COMMUNE
+join ( select NOM_PARKING, ID_COMMUNE, count(ID_TICKET) as NOMBRE_TICKET
+from PARKING
+natural join PLACE
+natural join TICKET
+group by ID_PARKING
+order by count(ID_TICKET) asc ) UTILISATION on UTILISATION.ID_COMMUNE = COMMUNE.ID_COMMUNE
+order by NOMBRE_TICKET desc;
+
+
 -- les communes les plus demandées par semaine
 
 select NOM_COMMUNE, NOMBRE_TICKET
@@ -58,6 +71,7 @@ join ( select NOM_PARKING, ID_COMMUNE, count(ID_TICKET) as NOMBRE_TICKET
 from PARKING
 natural join PLACE
 natural join TICKET
+where DATE_TICKET between '2020-12-30' and '2021-01-07'
 group by ID_PARKING
 order by count(ID_TICKET) asc ) UTILISATION on UTILISATION.ID_COMMUNE = COMMUNE.ID_COMMUNE
 order by NOMBRE_TICKET desc;

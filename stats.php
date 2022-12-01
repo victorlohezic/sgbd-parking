@@ -54,7 +54,7 @@
     <h3 class="center"> Requêtes spécifiques aux communes</h3>
         <div class="row">
         <div class="col s4 offset-s4 center">
-                <a onClick="window.open('all_place.php')" class="btn-jtb red">Classement des communes les plus demandés par semaine</a>
+                <a onClick="window.open('classement_commune_plus_demande_par_semaine.php')" class="btn-jtb">Classement des communes les plus demandées par semaine</a>
             </div>
         </div>
     </div>

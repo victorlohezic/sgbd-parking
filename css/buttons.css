@@ -1,0 +1,136 @@
+@import "materialize.css";
+
+.btn-jtb {
+      background-color: white;
+      border: 2px solid orange;
+      border-radius: 8px;
+      color: black;
+      padding: 15px 45px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 24px;
+      transition-duration: 0.1s;
+    }
+
+.btn-jtb:hover{
+    background-color: orange;
+    color:black;
+}
+
+.ctrljtb {
+    font-family: arial;
+    display: block;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 14px;
+    padding-top: 0px;
+    cursor: pointer;
+    font-size: 21px;
+}
+.ctrljtb input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+.ctrljtb_indicator {
+    position: absolute;
+    top: 4px;
+    left: 10;
+    height: 30px;
+    width: 30px;
+    background: #e6e6e6;
+    border: 5px outset #000000;
+    border-radius: undefinedpx;
+}
+.ctrljtb:hover input ~ .ctrljtb_indicator,
+.ctrljtb input:focus ~ .ctrljtb_indicator {
+    background: #cccccc;
+}
+
+.ctrljtb input:checked ~ .ctrljtb_indicator {
+    background: orange;
+}
+.ctrljtb:hover input:not([disabled]):checked ~ .ctrljtb_indicator,
+.ctrljtb input:checked:focus ~ .ctrljtb_indicator {
+    background: orange;
+}
+.ctrljtb input:disabled ~ .ctrljtb_indicator {
+    background: #e6e6e6;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.ctrljtb_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+.ctrljtb input:checked ~ .ctrljtb_indicator:after {
+    display: block;
+}
+.ctrljtb-radio .ctrljtb_indicator {
+    border-radius: 50%;
+}
+
+.ctrljtb-radio .ctrljtb_indicator:after {
+    left: 7px;
+    top: 8px;
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+    transition: background 250ms;
+}
+.ctrljtb-radio input:disabled ~ .ctrljtb_indicator:after {
+    background: #7b7b7b;
+}.ctrljtb-radio .ctrljtb_indicator::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: -1.3rem;
+    margin-top: -1.3rem;
+    background: #2aa1c0;
+    border-radius: 3rem;
+    opacity: 0.6;
+    z-index: 99999;
+    transform: scale(0);
+}
+@keyframes s-ripple {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    20% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0.01;
+        transform: scale(1);
+    }
+}
+@keyframes s-ripple-dup {
+   0% {
+       transform: scale(0);
+    }
+   30% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+.ctrljtb-radio input + .ctrljtb_indicator::before {
+    animation: s-ripple 250ms ease-out;
+}
+.ctrljtb-radio input:checked + .ctrljtb_indicator::before {
+    animation-name: s-ripple-dup;
+}

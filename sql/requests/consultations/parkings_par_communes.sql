@@ -1,0 +1,5 @@
+-- Liste parkings par commune
+
+select NOM_PARKING,ADRESSE_PARKING,NOM_COMMUNE
+from PARKING P,COMMUNE C
+where P.ID_COMMUNE = C.ID_COMMUNE;

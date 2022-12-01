@@ -94,3 +94,4 @@ insert into TICKET values (17, '2022-04-14', '14:54:32','18:10:39', 'AO-365-HD',
 insert into TICKET values (18, '2022-09-19', '12:39:47','15:30:27', 'YK-966-AH',504);
 insert into TICKET values (19, '2020-12-30', '18:11:11','19:35:27', 'AO-365-HD',405);
 insert into TICKET values (20, '2020-12-30', '21:19:27','21:44:27', 'AO-365-HD',203);
+insert into TICKET values (21, NOW(), CURRENT_TIME, CURRENT_TIME+ interval '1 hour', 'AO-365-HD',203);

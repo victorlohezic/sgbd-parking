@@ -77,3 +77,66 @@ from PLACE
 right outer join PARKING P
 on PLACE.ID_PARKING = P.ID_PARKING
 group by P.NOM_PARKING, P.ID_PARKING;
+
+-- Liste des places disponibles par parking à un moment donnée
+select distinct ID_PLACE, NUMERO_PLACE
+from PLACE
+left outer join PARKING using(ID_PARKING)
+where NOM_PARKING='Village 1'
+except
+SELECT ID_PLACE, NUMERO_PLACE
+from TICKET 
+natural join PLACE
+natural join PARKING
+where DATE_TICKET = '2020-12-30' and HEURE_SORTIE > '16:49:27' and NOM_PARKING='Village 1';
+
+-- Liste de voitures et leur parking l à un moment donnée
+select NUMERO_IMMATRICULATION as NUMERO_IMMATRICULATION, NOM_PARKING as PARKING_ACTUEL
+from VEHICULE 
+left outer join TICKET using (NUMERO_IMMATRICULATION)
+left outer join PLACE using (ID_PLACE)
+left outer join PARKING using(ID_PARKING)
+where DATE_TICKET = '2020-12-30' and HEURE_SORTIE > '10:49:27';
+
+-- Liste de voitures garés et leur parking actuel 
+select NUMERO_IMMATRICULATION, NOM_PARKING as PARKING_ACTUEL
+from VEHICULE 
+left outer join TICKET using (NUMERO_IMMATRICULATION)
+left outer join PLACE using (ID_PLACE)
+left outer join PARKING using(ID_PARKING)
+where DATE_TICKET = NOW()::date and HEURE_SORTIE > NOW()::time;
+
+-- Liste de voitures non garé actuellement
+select distinct on (NUMERO_IMMATRICULATION) NUMERO_IMMATRICULATION
+from VEHICULE 
+left outer join TICKET using (NUMERO_IMMATRICULATION)
+left outer join PLACE using (ID_PLACE)
+left outer join PARKING using(ID_PARKING)
+EXCEPT
+select NUMERO_IMMATRICULATION
+from VEHICULE 
+left outer join TICKET using (NUMERO_IMMATRICULATION)
+left outer join PLACE using (ID_PLACE)
+left outer join PARKING using(ID_PARKING)
+where DATE_TICKET = NOW()::date and HEURE_SORTIE > NOW()::time;
+
+-- Liste de voitures et leur parking
+select NUMERO_IMMATRICULATION, NOM_PARKING as PARKING_ACTUEL
+from VEHICULE 
+left outer join TICKET using (NUMERO_IMMATRICULATION)
+left outer join PLACE using (ID_PLACE)
+left outer join PARKING using(ID_PARKING)
+where DATE_TICKET = NOW()::date and HEURE_SORTIE > NOW()::time
+union all
+select distinct on (NUMERO_IMMATRICULATION) NUMERO_IMMATRICULATION, Null as PARKING_ACTUEL
+from VEHICULE 
+left outer join TICKET using (NUMERO_IMMATRICULATION)
+left outer join PLACE using (ID_PLACE)
+left outer join PARKING using(ID_PARKING)
+EXCEPT
+select NUMERO_IMMATRICULATION, Null as PARKING_ACTUEL
+from VEHICULE
+left outer join TICKET using (NUMERO_IMMATRICULATION)
+left outer join PLACE using (ID_PLACE)
+left outer join PARKING using(ID_PARKING)
+where DATE_TICKET = NOW()::date and HEURE_SORTIE > NOW()::time;

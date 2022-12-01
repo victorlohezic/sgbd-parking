@@ -68,7 +68,7 @@
         </div>
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="window.open('places_par_parking.php')" class="btn-jtb red">Liste des places disponibles par parking, à un moment donnée</a>
+                <a onClick="window.open('liste_place_disponible_parking_moment_donnee.php')" class="btn-jtb">Liste des places disponibles par parking, à un moment donnée</a>
             </div>
             <div class="col s3 center">
                 <a onClick="window.open('liste_parking_sature.php')" class="btn-jtb">Liste des parkings qui sont saturés à un jour donnée</a>
@@ -76,7 +76,7 @@
         </div>
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="window.open('nombre_place_disponible_parking_moment_donnee.php')" class="btn-jtb">Nombre de places disponibles par parking à un moment donnée</a>
+                <a onClick="window.open('nombre_place_disponible_parking_moment_donnee.php')" class="btn-jtb">Nombre de place disponibles par parking à un moment donnée</a>
             </div>
         </div>
     <br><br>
@@ -86,7 +86,7 @@
                 <a onClick="window.open('voiture_deux_parkings.php')" class="btn-jtb"> Véhicules s'étant stationnés deux fois en un jour</a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('voitures_par_parkings.php')" class="btn-jtb red"> Liste de voitures et leurs parking actuel (REQUETE FAUSSE) </a>
+                <a onClick="window.open('voitures_par_parkings.php')" class="btn-jtb"> Liste de voitures et leurs parking actuel</a>
             </div>
         </div>
     </div>

@@ -23,44 +23,36 @@
             </div>
         </div>
     <br></br>
-    <h3 class="center">Requêtes spécifiques aux parkings</h3>
+    <h3 class="center"> Données brutes de la BDD </h3>
     <div class="container">
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="window.open('moyenne_nombre_place_par_parking.php')" class="btn-jtb">Moyenne du nombre de places disponibles par parking</a>
+                <a onClick="window.open('add_commune.php')" class="btn-jtb"> Communes </a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('all_parking.php')" class="btn-jtb red">Durée moyenne de stationnement d'un véhicule par parking</a>
+                <a onClick="window.open('add_parking.php')" class="btn-jtb"> Parkings </a>
             </div>
         </div>
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="window.open('parking_moins_utilises.php')" class="btn-jtb">Classement des parkings les moins utilisés</a>
+                <a onClick="window.open('add_vehicule.php')" class="btn-jtb"> Vehicules </a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('all_place.php')" class="btn-jtb red">Classement des parkings les plus rentables par commune et par mois</a>
+                <a onClick="window.open('add_place.php')" class="btn-jtb"> Places </a>
             </div>
         </div>
+        <div class="row">
+            <div class="col s6 offset-s3 center">
+                <a onClick="window.open('add_ticket.php')" class="btn-jtb"> Tickets </a>
+            </div>
+        </div>  
     </div>
     <br><br>
-    <h3 class="center"> Requête spécifique aux Véhicules</h3>
-    <div class="container">
-        <div class="row">
-        <div class="col s4 offset-s4 center">
-                <a onClick="window.open('all_place.php')" class="btn-jtb red">Coûts moyen du stationnement d’un véhicule par mois</a>
-            </div>
-        </div>
-    <br><br>
-    <h3 class="center"> Requêtes spécifiques aux communes</h3>
-        <div class="row">
-        <div class="col s4 offset-s4 center">
-                <a onClick="window.open('classement_commune_plus_demande_par_semaine.php')" class="btn-jtb">Classement des communes les plus demandées par semaine</a>
-            </div>
-        </div>
-    </div>
-</div>
-    <br><br>
+
    <?php include("template/footer.php"); ?>
+
+
+
 </body>
 
 </html>

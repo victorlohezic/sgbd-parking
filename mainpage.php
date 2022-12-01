@@ -95,6 +95,19 @@
                     <a href="/stats.php" class="btn-jtb"> Consulter les statistiques de la base de données</a>
                 </div>
             </div>
+            <div class="row">
+                <div class="col s6 center">
+                    <a href="/add.php" class="btn-jtb">Ajout de données</a>
+                </div>
+                <div class="col s6 center">
+                    <a href="/stats.php" class="btn-jtb red">Mise à jour de données</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 center">
+                    <a href="/consultation.php" class="btn-jtb red">Suppression de données</a>
+                </div>
+            </div>
             <br><br>
         </div>
 

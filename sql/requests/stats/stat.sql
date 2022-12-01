@@ -16,7 +16,9 @@ select ID_PARKING, (HEURE_SORTIE-HEURE_ENTREE) as DUREE
 
 select ID_PARKING, avg(DUREE)
 from (select ID_PARKING, (HEURE_SORTIE-HEURE_ENTREE) as DUREE 
-    from TICKET inner join PLACE using(ID_PLACE)) as SUBQUERY
+    from TICKET inner join PLACE using(ID_PLACE))
+    inner join VEHICULE using(NUMERO_IMMATRICULATION) as SUBQUERY
+    where NUMEROR_IMMATRICULATION = 'ZT-756-PA'
     group by ID_PARKING;
 
 

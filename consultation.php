@@ -74,6 +74,11 @@
                 <a onClick="window.open('liste_parking_sature.php')" class="btn-jtb">Liste des parkings qui sont saturés à un jour donnée</a>
             </div>
         </div>
+        <div class="row">
+            <div class="col s3 offset-s3 center">
+                <a onClick="window.open('nombre_place_disponible_parking_moment_donnee.php')" class="btn-jtb">Nombre de places disponibles par parking à un moment donnée</a>
+            </div>
+        </div>
     <br><br>
     <h3 class="center"> Requêtes spécifiques aux voitures</h3>
         <div class="row">

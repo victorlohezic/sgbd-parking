@@ -105,7 +105,7 @@
             </div>
             <div class="row">
                 <div class="col s6 center">
-                    <a href="/consultation.php" class="btn-jtb red">Suppression de données</a>
+                    <a href="/remove_page.php" class="btn-jtb">Suppression de données</a>
                 </div>
             </div>
             <br><br>

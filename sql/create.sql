@@ -41,7 +41,7 @@ create table PLACE (
 	NUMERO_PLACE VARCHAR (7) NOT NULL,
 	ID_PARKING INT NOT NULL,
 	foreign key (ID_PARKING)
-		references PARKING (ID_PARKING)
+		references PARKING (ID_PARKING) ON DELETE CASCADE
 );
 
 -- ============================================================
@@ -57,5 +57,5 @@ create table TICKET (
 	foreign key (NUMERO_IMMATRICULATION)
 		references VEHICULE (NUMERO_IMMATRICULATION),
 	foreign key (ID_PLACE)
-		references PLACE (ID_PLACE)
+		references PLACE (ID_PLACE) ON DELETE CASCADE
 );

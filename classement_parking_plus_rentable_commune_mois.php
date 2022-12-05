@@ -19,7 +19,7 @@
         <div class="card blue-grey darken-1">
           <div class="card-content white-text">
             <span class="card-title">Conseil</span>
-            <p>Pour visualiser des données, choisir le jour '2020-12-30' et l'heure '19:49:27'.</p>
+            <p>Pour visualiser des données, choisir le jour '2020-12-30' à Bordeaux.</p>
           </div>
         </div>
       </div>
@@ -56,19 +56,23 @@
      <div class="row">
             <table class="col s8 m8 offset-s2 offset-m2">
                 <tr>
-              <th>ID Place</th>
-              <th>Numéro Place</th>
+              <th>ID Parking</th>
+              <th>Nom Parking</th>
+              <th>Chiffre d'affaire</th>
                 </tr>
           <?php
                   if(isset($_POST['submit'])){
                     $date = $_POST['date'];
                     $month = substr($date, 5, 2);
+                    $year = substr($date, 0, 4);
+                    echo $year;
+                    echo $month;
                     $id_commune = $_POST['id_commune'];
                     $requete = "select ID_PARKING, NOM_PARKING, coalesce(sum(TARIF_HORAIRE*(date_part('hour', HEURE_SORTIE-HEURE_ENTREE) + date_part('minute', HEURE_SORTIE-HEURE_ENTREE)/60 + date_part('second', HEURE_SORTIE-HEURE_ENTREE)/3600)),0) as CHIFFRE_DAFFAIRE
                     from PARKING  
                     left outer join PLACE using(ID_PARKING) 
                     left outer join TICKET using (ID_PLACE)
-                    where (date_part('month',DATE_TICKET)=11 and date_part('year',DATE_TICKET)=2020) or ID_TICKET is null
+                    where (date_part('month',DATE_TICKET)='{$month}' and date_part('year',DATE_TICKET)=$year) or ID_TICKET is null
                     group by(ID_PARKING, NOM_PARKING)
                     having ID_COMMUNE='{$id_commune}'
                     order by CHIFFRE_DAFFAIRE desc;";
@@ -77,8 +81,9 @@
                     if($res) {
                       /* ... on récupère un tableau stockant le résultat */
                         while ($place =  pg_fetch_assoc($res)) {
-                            echo "\t".'<tr><td>'.$place['id_place'].'</td>';
-                            echo '<td>'.$place['numero_place'].'</td>';
+                            echo "\t".'<tr><td>'.$place['id_parking'].'</td>';
+                            echo '<td>'.$place['nom_parking'].'</td>';
+                            echo '<td>'.$place['chiffre_daffaire'].'</td>';
                             echo '</tr>'."\n";
                         }
                         /*liberation de l'objet requete:*/

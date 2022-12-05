@@ -38,7 +38,7 @@
                 <a onClick="window.open('parking_moins_utilises.php')" class="btn-jtb">Classement des parkings les moins utilisés</a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('classement_parking_plus_rentable_commune_mois.php')" class="btn-jtb red">Classement des parkings les plus rentables par commune et par mois</a>
+                <a onClick="window.open('classement_parking_plus_rentable_commune_mois.php')" class="btn-jtb">Classement des parkings les plus rentables par commune et par mois</a>
             </div>
         </div>
     </div>

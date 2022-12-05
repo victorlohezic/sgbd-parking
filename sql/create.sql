@@ -85,7 +85,7 @@ create or replace function ID_COMMUNE() returns TRIGGER as $ID_COMMUNE$
 	declare
 		id_max	integer;
     begin
-		SELECT max(ID_COMMUNE) into id_max from COMMUNE;
+		SELECT count(NUMERO_IMMATRICULATION) into id_max from VEHICULE where NUMERO_IMMATRICULATION='00-000-00';
         if new.ID_COMMUNE < id_max 
 		then
             new.ID_COMMUNE := id_max + 1;
@@ -97,3 +97,25 @@ $ID_COMMUNE$ LANGUAGE plpgsql;
 create TRIGGER ID_COMMUNE before insert or update on COMMUNE
     for each row execute procedure ID_COMMUNE();
 	
+-- ============================================================
+--   Trigger : SUPPRESSION_VEHICULE                          
+-- ============================================================
+
+create or replace function SUPPRESSION_VEHICULE() returns TRIGGER as $SUPPRESSION_VEHICULE$
+	declare
+		immatriculation_defaut	integer;
+    begin
+		SELECT count(NUMERO_IMMATRICULATION) into immatriculation_defaut from VEHICULE where NUMERO_IMMATRICULATION='00-000-00';
+        if immatriculation_defaut = 0
+		then
+            insert into VEHICULE values ('00-000-00', 'defaut', NOW() - interval '2 year', 0, 'defaut');
+        end if;
+		update TICKET
+		set NUMERO_IMMATRICULATION = '00-000-00'
+		where NUMERO_IMMATRICULATION = old.NUMERO_IMMATRICULATION;
+        return old;
+    end;
+$SUPPRESSION_VEHICULE$ LANGUAGE plpgsql;
+
+create TRIGGER SUPPRESSION_VEHICULE before delete on VEHICULE
+    for each row execute procedure SUPPRESSION_VEHICULE();

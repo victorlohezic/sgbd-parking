@@ -29,6 +29,9 @@
             <div class="col s6 center">
                 <a href="/remove_parking.php" class="btn-jtb">Suppression d'un parking ajouté par erreur</a>
             </div>
+            <div class="col s6 center">
+                <a href="/remove_vehicule.php" class="btn-jtb">Suppression d'un véhicule</a>
+            </div>
         </div> 
     </div>
     <br><br>

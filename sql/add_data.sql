@@ -104,4 +104,3 @@ insert into TICKET values (20, '2020-12-30', '21:19:27','21:44:27', 'AO-365-HD',
 --insert into TICKET values (22, '2020-11-11', '09:33:13','14:44:55', 'AO-365-HD',504);
 
 insert into TICKET values (21, NOW(), CURRENT_TIME, CURRENT_TIME+ interval '1 hour', 'AO-365-HD',203);
-

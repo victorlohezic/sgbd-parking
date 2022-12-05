@@ -59,3 +59,41 @@ create table TICKET (
 	foreign key (ID_PLACE)
 		references PLACE (ID_PLACE) ON DELETE CASCADE
 );
+
+-- ============================================================
+--   Trigger : PRESQUE_NEUF                             
+-- ============================================================
+
+create or replace function PRESQUE_NEUF() returns TRIGGER as $PRESQUE_NEUF$
+    begin
+        if new.ETAT = 'presque neuf' and new.KILOMETRAGE > 6000 then
+            new.ETAT := 'bon';
+        end if;
+        return new;
+    end;
+$PRESQUE_NEUF$ LANGUAGE plpgsql;
+
+create TRIGGER PRESQUE_NEUF before insert or update on VEHICULE
+    for each row execute procedure PRESQUE_NEUF();
+
+
+-- ============================================================
+--   Trigger : ID_COMMUNE                          
+-- ============================================================
+
+create or replace function ID_COMMUNE() returns TRIGGER as $ID_COMMUNE$
+	declare
+		id_max	integer;
+    begin
+		SELECT max(ID_COMMUNE) into id_max from COMMUNE;
+        if new.ID_COMMUNE < id_max 
+		then
+            new.ID_COMMUNE := id_max + 1;
+        end if;
+        return new;
+    end;
+$ID_COMMUNE$ LANGUAGE plpgsql;
+
+create TRIGGER ID_COMMUNE before insert or update on COMMUNE
+    for each row execute procedure ID_COMMUNE();
+	

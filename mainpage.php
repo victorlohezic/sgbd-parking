@@ -100,7 +100,7 @@
                     <a href="/add.php" class="btn-jtb">Ajout de données</a>
                 </div>
                 <div class="col s6 center">
-                    <a href="/stats.php" class="btn-jtb red">Mise à jour de données</a>
+                    <a href="/update_page.php" class="btn-jtb">Mise à jour de données</a>
                 </div>
             </div>
             <div class="row">

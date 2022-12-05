@@ -42,6 +42,7 @@
      <div class="row">
             <table class="col s8 m8 offset-s2 offset-m2">
                 <tr>
+              <th>Id Communes</th>
               <th>Nom Communes</th>
               <th>Nombres de tickets vendus</th>
                 </tr>
@@ -49,23 +50,23 @@
                   if(isset($_POST['submit'])){
                     $date = $_POST['date'];
                     $date_after = date('Y-m-d', strtotime($date. ' + 7 days'));
-                    $requete = "select NOM_COMMUNE, NOMBRE_TICKET
+                    $requete = "
+                    select ID_COMMUNE, NOM_COMMUNE, count(ID_TICKET) as nb_tickets
                     from COMMUNE
-                    join ( select NOM_PARKING, ID_COMMUNE, count(ID_TICKET) as NOMBRE_TICKET
-                    from PARKING
-                    natural join PLACE
-                    natural join TICKET
-                    where DATE_TICKET between '{$date}' and '{$date_after}'
-                    group by ID_PARKING
-                    order by count(ID_TICKET) asc ) UTILISATION on UTILISATION.ID_COMMUNE = COMMUNE.ID_COMMUNE
-                    order by NOMBRE_TICKET desc;";
+                    left outer join PARKING using(ID_COMMUNE)
+                    left outer join PLACE using(ID_PARKING)
+                    left outer join TICKET using(ID_PLACE)
+                    where (DATE_TICKET between '{$date}' and '{$date_after}') or ID_TICKET is null
+                    group by ID_COMMUNE, NOM_COMMUNE
+                    order by nb_tickets desc;";
                     /* Si l'execution est reussie... */
                     $res = pg_query($connection, $requete);
                     if($res) {
                       /* ... on récupère un tableau stockant le résultat */
                         while ($parking =  pg_fetch_assoc($res)) {
-                            echo "\t".'<tr><td>'.$parking['nom_commune'].'</td>';
-                            echo '<td>'.$parking['nombre_ticket'].'</td>';
+                            echo "\t".'<tr><td>'.$parking['id_commune'].'</td>';
+                            echo '<td>'.$parking['nom_commune'].'</td>';
+                            echo '<td>'.$parking['nb_tickets'].'</td>';
                             echo '</tr>'."\n";
                         }
                         /*liberation de l'objet requete:*/

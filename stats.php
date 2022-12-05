@@ -30,7 +30,7 @@
                 <a onClick="window.open('moyenne_nombre_place_par_parking.php')" class="btn-jtb">Moyenne du nombre de places disponibles par parking</a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('all_parking.php')" class="btn-jtb red">Durée moyenne de stationnement d'un véhicule par parking</a>
+                <a onClick="window.open('duree_moyenne_stationnement_vehicule_par_parking.php')" class="btn-jtb">Durée moyenne de stationnement d'un véhicule par parking</a>
             </div>
         </div>
         <div class="row">
@@ -38,7 +38,7 @@
                 <a onClick="window.open('parking_moins_utilises.php')" class="btn-jtb">Classement des parkings les moins utilisés</a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('all_place.php')" class="btn-jtb red">Classement des parkings les plus rentables par commune et par mois</a>
+                <a onClick="window.open('classement_parking_plus_rentable_commune_mois.php')" class="btn-jtb red">Classement des parkings les plus rentables par commune et par mois</a>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
     <div class="container">
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="window.open('all_place.php')" class="btn-jtb red">Coûts moyen du stationnement d’un véhicule par mois</a>
+                <a onClick="window.open('cout_moyen_stationnement_vehicule_mois.php')" class="btn-jtb">Coûts moyen du stationnement d’un véhicule par mois</a>
             </div>
             <div class="col s3 center">
                 <a onClick="window.open('moyenne_kilometrages_voitures_plus_tickets.php')" class="btn-jtb">Moyenne des kilométrages des voitures ayant le plus de tickets</a>

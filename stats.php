@@ -46,8 +46,11 @@
     <h3 class="center"> Requête spécifique aux Véhicules</h3>
     <div class="container">
         <div class="row">
-        <div class="col s4 offset-s4 center">
+            <div class="col s3 offset-s3 center">
                 <a onClick="window.open('all_place.php')" class="btn-jtb red">Coûts moyen du stationnement d’un véhicule par mois</a>
+            </div>
+            <div class="col s3 center">
+                <a onClick="window.open('moyenne_kilometrages_voitures_plus_tickets.php')" class="btn-jtb">Moyenne des kilométrages des voitures ayant le plus de tickets</a>
             </div>
         </div>
     <br><br>

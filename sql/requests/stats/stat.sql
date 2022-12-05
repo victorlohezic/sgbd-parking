@@ -115,7 +115,6 @@ select ID_PARKING, NOM_PARKING, coalesce(sum(TARIF_HORAIRE*(date_part('hour', HE
 
 
 -- les communes les plus demandées
-
 select NOM_COMMUNE, NOMBRE_TICKET
 from COMMUNE
 join ( select NOM_PARKING, ID_COMMUNE, count(ID_TICKET) as NOMBRE_TICKET
@@ -134,6 +133,8 @@ order by NOMBRE_TICKET desc;
 
 
 -- les communes les plus demandées par semaine
+-- explication: pour une semaine donnée, donne le classement des communes ayant généré le plus de tickets au cours de la semaine
+
 -- requete finale
 
 select ID_COMMUNE, NOM_COMMUNE, count(ID_TICKET) as nb_tickets
@@ -151,6 +152,8 @@ order by nb_tickets desc;
 
 
 -- moyenne des kilométrages des voitures ayant le plus de tickets
+-- explication: filtre les vehicules pour ne garder que ceux ayant un nombre de ticket egal a max
+-- puis effectue la moyenne sur leurs kilometrages
 select avg(KILOMETRAGE) as moyenne_km
     from VEHICULE 
     where NUMERO_IMMATRICULATION in

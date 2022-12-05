@@ -71,9 +71,16 @@ insert into PLACE values (504, 4, 5);
 insert into PLACE values (505, 5, 5);
 
 
+insert into PLACE values (601, 1, 6);
+insert into PLACE values (602, 2, 6);
+insert into PLACE values (603, 3, 6);
+insert into PLACE values (604, 4, 6);
+insert into PLACE values (605, 5, 6);
+
+
+
 
 -- TICKET
-
 insert into TICKET values (1, '2021-03-07', '14:09:48','18:23:27', 'YK-966-AH',104);
 insert into TICKET values (2, '2020-11-11', '07:51:13','14:44:27', 'OL-758-JV',202);
 insert into TICKET values (3, '2022-08-02', '16:42:45','19:26:27', 'PC-967-DK',205);
@@ -94,4 +101,7 @@ insert into TICKET values (17, '2022-04-14', '14:54:32','18:10:39', 'AO-365-HD',
 insert into TICKET values (18, '2022-09-19', '12:39:47','15:30:27', 'YK-966-AH',504);
 insert into TICKET values (19, '2020-12-30', '18:11:11','19:35:27', 'AO-365-HD',405);
 insert into TICKET values (20, '2020-12-30', '21:19:27','21:44:27', 'AO-365-HD',203);
+--insert into TICKET values (22, '2020-11-11', '09:33:13','14:44:55', 'AO-365-HD',504);
+
 insert into TICKET values (21, NOW(), CURRENT_TIME, CURRENT_TIME+ interval '1 hour', 'AO-365-HD',203);
+

@@ -94,7 +94,7 @@ Il suffit alors de modifier les deux premières lignes de la manière suivante :
 <?php
   $login = 'VOTRE_LOGIN';
   $db_pwd = 'VOTRE_MOT_DE_PASSE';
-?> 
+...
 ```
 
 ## Exécuter le projet

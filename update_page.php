@@ -27,7 +27,7 @@
     <div class="container">
     <div class="row">
             <div class="col s6 center">
-                <a href="/update_vehicule.php" class="btn-jtb red">Mettre à jour une plaque d'immatriculation</a>
+                <a href="/update_name_parking.php" class="btn-jtb">Mettre à jour le nom d'un parking</a>
             </div>
         </div> 
     </div>

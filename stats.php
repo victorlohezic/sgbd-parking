@@ -27,18 +27,18 @@
     <div class="container">
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="window.open('moyenne_nombre_place_par_parking.php')" class="btn-jtb">Moyenne du nombre de places disponibles par parking</a>
+                <a href="moyenne_nombre_place_par_parking.php" class="btn-jtb">Moyenne du nombre de places disponibles par parking</a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('duree_moyenne_stationnement_vehicule_par_parking.php')" class="btn-jtb">Durée moyenne de stationnement d'un véhicule par parking</a>
+                <a href="duree_moyenne_stationnement_vehicule_par_parking.php" class="btn-jtb">Durée moyenne de stationnement d'un véhicule par parking</a>
             </div>
         </div>
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="window.open('parking_moins_utilises.php')" class="btn-jtb">Classement des parkings les moins utilisés</a>
+                <a href="parking_moins_utilises.php" class="btn-jtb">Classement des parkings les moins utilisés</a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('classement_parking_plus_rentable_commune_mois.php')" class="btn-jtb">Classement des parkings les plus rentables par commune et par mois</a>
+                <a href="classement_parking_plus_rentable_commune_mois.php" class="btn-jtb">Classement des parkings les plus rentables par commune et par mois</a>
             </div>
         </div>
     </div>
@@ -47,17 +47,17 @@
     <div class="container">
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="window.open('cout_moyen_stationnement_vehicule_mois.php')" class="btn-jtb">Coûts moyen du stationnement d’un véhicule par mois</a>
+                <a href="cout_moyen_stationnement_vehicule_mois.php" class="btn-jtb">Coûts moyen du stationnement d’un véhicule par mois</a>
             </div>
             <div class="col s3 center">
-                <a onClick="window.open('moyenne_kilometrages_voitures_plus_tickets.php')" class="btn-jtb">Moyenne des kilométrages des voitures ayant le plus de tickets</a>
+                <a href="moyenne_kilometrages_voitures_plus_tickets.php" class="btn-jtb">Moyenne des kilométrages des voitures ayant le plus de tickets</a>
             </div>
         </div>
     <br><br>
     <h3 class="center"> Requêtes spécifiques aux communes</h3>
         <div class="row">
         <div class="col s4 offset-s4 center">
-                <a onClick="window.open('classement_commune_plus_demande_par_semaine.php')" class="btn-jtb">Classement des communes les plus demandées par semaine</a>
+                <a href="classement_commune_plus_demande_par_semaine.php" class="btn-jtb">Classement des communes les plus demandées par semaine</a>
             </div>
         </div>
     </div>

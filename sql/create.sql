@@ -121,7 +121,7 @@ create TRIGGER SUPPRESSION_VEHICULE before delete on VEHICULE
     for each row execute procedure SUPPRESSION_VEHICULE();
 
 -- ============================================================
---   Procédure : MODIFICATION_VEHICULE                         
+--   Procédure : Renommer un parking                        
 -- ============================================================
 create or replace procedure rename(oldname VARCHAR, newname VARCHAR)
 LANGUAGE plpgsql

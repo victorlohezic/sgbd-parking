@@ -9,7 +9,10 @@ then
            echo "pwd_jtb" | psql -h localhost -p 5432 -U jtb -f sql/create.sql 
         ;;
         add_data)
-            psql -h localhost -p 5432 -U jtb -f sql/add_data.sql 
+            psql -h localhost -p 5432 -U jtb -f sql/insert.sql 
+        ;;
+        select)
+            psql -h localhost -p 5432 -U jtb -f sql/select.sql 
         ;;
         consult)
             psql -h localhost -p 5432 -U jtb -f sql/requests/consultations/consultation.sql 
@@ -21,20 +24,22 @@ then
             psql -h localhost -p 5432 -U jtb -f sql/update.sql 
         ;;
         website)
-            sudo cp -r ./* /var/www/html/
+            sudo cp -r ./src/* /var/www/html/
+            sudo cp -r ./sql /var/www/html/
             firefox http://localhost/index.php &
         ;;
         clean)
-            psql -h localhost -p 5432 -U jtb -f sql/clean.sql 
+            psql -h localhost -p 5432 -U jtb -f sql/drop.sql 
         ;;
         reset)
-            psql -h localhost -p 5432 -U jtb -f sql/clean.sql
+            psql -h localhost -p 5432 -U jtb -f sql/drop.sql
             echo "pwd_jtb" | psql -h localhost -p 5432 -U jtb -f sql/create.sql
-            psql -h localhost -p 5432 -U jtb -f sql/add_data.sql
+            psql -h localhost -p 5432 -U jtb -f sql/insert.sql
         ;;
         help)
             echo "create : Crée la base de donnée"
             echo "add_data : Ajoute des données à la base de donnée"
+            echo "select : Exécute les requêtes de consultation et statistiques"
             echo "consult : Exécute les requêtes de consultation"
             echo "stat : Exécute les requêtes statistiques"
             echo "update : Exécute les requêtes de mide à jour"

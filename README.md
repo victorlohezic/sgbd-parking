@@ -84,7 +84,7 @@ export PGPASSWORD=VOTRE_MOT_DE_PASSE
 ```
 
 ### Site web
-Pour pouvoir utiliser le site web, vous devez modifier le fichier suivant : 
+Pour pouvoir utiliser le site web, vous devez modifier le fichier suivant `src/connect.php` : 
 ```PHP
 <?php
   $login = 'jtb';

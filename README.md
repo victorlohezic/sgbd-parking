@@ -1,6 +1,6 @@
 # Projet de Base de Données
 
-## Base de données
+## Installation de la base de données PostgreSQL 
 ------------------------
 ### Installation de PostgreSQL
 Les instructions sont les suivantes :
@@ -74,14 +74,53 @@ Voici quelques commandes qui peuvent être utiles :
     sudo systemctl status apache2
     ```
 
+## Modification des fichiers du projet pour pouvoir utiliser sa propre base de données
+
+Pour pouvoir utiliser le site web, vous devez modifier le fichier suivant : 
+```PHP
+<?php
+  $login = 'jtb';
+  $db_pwd = 'pwd_jtb';
+  /* Creation de l'objet qui gere la connexion: */
+  $connection_string = "host=localhost port=5432 dbname=".$login." user=".$login." password=".$db_pwd;
+  $connection = pg_connect($connection_string);
+  if(!$connection) {
+     echo 'error';
+  }
+?> 
+```
+Il suffit alors de modifier les deux premières lignes de la manière suivante :
+```PHP
+<?php
+  $login = 'VOTRE_LOGIN';
+  $db_pwd = 'VOTRE_MOT_DE_PASSE';
+?> 
+```
+
 ## Exécuter le projet
-Il suffit d'exécuter `make.sh` avec le bon paramètre. Pour les connaître, écrivez : `make.sh help`. 
+Il suffit d'exécuter `make.sh` avec le bon paramètre. 
+
+Pour les connaître, écrivez : `./make.sh help` dans votre terminal. Il faut être à la racine du projet. 
+
 Les différents paramètres sont résumés dans ce tableau :
 | Paramètre  |  Utilité |
 | :--------------- | :-----|
 | create  |     Crée la base de donnée |
 | add_data  |   Ajoute des données à la base de donnée |
-| select  |   Exécute les requêtes de sélection |
-| website  |    Ouvre le site web |
 | clean  |    Supprime la base de donnée |
-| reset | reset : Réalise clean, create, add-data |
+| reset | Exécute clean, create et add_data |
+| select  |   Exécute les requêtes de consultation et statistiques |
+| consult  |   Exécute les requêtes de consultation |
+| stat  |   Exécute les requêtes statistiques |
+| website  |    Ouvre le site web |
+
+Par exemple, vous pouvez lancer les requêtes d'exécutions de la manière suivante : 
+
+```bash
+./make.sh consult
+```
+
+Pour lancer le site web, il suffit d'écrire : 
+```bash
+./make.sh website
+```

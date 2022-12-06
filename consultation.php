@@ -1,5 +1,4 @@
 <html>
-<script src="js/consultation.js"></script>
  <?php // Bloc PHP qui permet de spécifier une erreur sur la page
  // Intéressant notamment lors d'erreurs 500 peu précises
  error_reporting(E_ALL);

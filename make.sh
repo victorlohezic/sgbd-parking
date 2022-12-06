@@ -6,7 +6,7 @@ if [ $nb_parameter -eq 1 ]
 then 
     case $1 in
         create)
-           echo "pwd_jtb" | psql -h localhost -p 5432 -U jtb -f sql/create.sql 
+            psql -h localhost -p 5432 -U jtb -f sql/create.sql 
         ;;
         add_data)
             psql -h localhost -p 5432 -U jtb -f sql/insert.sql 
@@ -33,7 +33,7 @@ then
         ;;
         reset)
             psql -h localhost -p 5432 -U jtb -f sql/drop.sql
-            echo "pwd_jtb" | psql -h localhost -p 5432 -U jtb -f sql/create.sql
+            psql -h localhost -p 5432 -U jtb -f sql/create.sql
             psql -h localhost -p 5432 -U jtb -f sql/insert.sql
         ;;
         help)

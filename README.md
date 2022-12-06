@@ -75,7 +75,15 @@ Voici quelques commandes qui peuvent être utiles :
     ```
 
 ## Modification des fichiers du projet pour pouvoir utiliser sa propre base de données
+### make.sh
+Pour pouvoir utiliser le script shell, il est nécessaire de le modifier. A la deuxième ligne de celui-ci, vous devez indiquer le mot de passe de votre base de données : 
+```bash
+#!/bin/bash
+export PGPASSWORD=VOTRE_MOT_DE_PASSE
+...
+```
 
+### Site web
 Pour pouvoir utiliser le site web, vous devez modifier le fichier suivant : 
 ```PHP
 <?php

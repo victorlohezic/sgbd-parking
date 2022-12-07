@@ -9,7 +9,7 @@
 <?php include("template/header.php"); ?>
  <body>
  <?php include("template/navbar.php"); ?>
-   <h2 class="center">Liste des parkings qui sont saturés à un jour donnée</h2>
+   <h2 class="center">Liste des parkings qui sont saturés à un jour donné</h2>
      <?php
     include "connect.php"; /* Le fichier connect.php contient les identifiants de connexion */
      ?>
@@ -27,10 +27,12 @@
       <div class="row">
       <form method="post" class="i col s8 offset-s2">
                 <div class="row">
-                  <div class="input-field col s12">    
+                  <div class="input-field col s12">
+                    <p>Date</p>     
                     <input type="text" name="date" class="datepicker">
                   </div>
-                  <div class="input-field col s12">    
+                  <div class="input-field col s12">
+                    <p>Heure</p>     
                     <input type="text" name="time" class="timepicker">
                   </div>
                 </div>

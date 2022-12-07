@@ -42,7 +42,8 @@
                       <input name="id_place"  id="id_place" type="text" class="validate">
                       <label for="id_place">ID place</label>
                     </div>
-                    <div class="input-field col s12">    
+                    <div class="input-field col s12">
+                      <p>Date de stationnement</p>
                       <input type="text" name="date" class="datepicker">
                     </div>
                     <div class="input-field col s12">  

@@ -10,28 +10,27 @@
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+          <h5 class="white-text">Technologies used</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="https://www.postgresql.org/">PostgreSQL</a></li>
+            <li><a class="white-text" href="https://materializecss.com/">Materialize CSS</a></li>
+            <li><a class="white-text" href="https://httpd.apache.org/">Apache Server</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
+          <h5 class="white-text">Contact Us</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="mailto: victor.lohezic@enseirb-matmeca.fr?subject = JTB Parking Feedback">Lohezic Victor</a></li>
+            <li><a class="white-text" href="mailto: nathan.thivin@enseirb-matmeca.fr?subject = JTB Parking Feedback">Thivin Nathan</a></li>
+            <li><a class="white-text" href="mailto: louis-victor.ladagnous@enseirb-matmeca.fr?subject = JTB Parking Feedback">Ladagnous Louis-Victor</a></li>
+            <li><a class="white-text" href="mailto: alexandre.soulie@enseirb-matmeca.fr?subject = JTB Parking Feedback">Soulié Alexandre</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-        Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">JTB team</a>
+        Made by <a class="orange-text text-lighten-3">JTB team</a>
       </div>
     </div>
   </footer>

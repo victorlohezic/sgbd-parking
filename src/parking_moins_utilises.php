@@ -9,7 +9,7 @@
 <?php include("template/header.php"); ?>
  <body>
  <?php include("template/navbar.php"); ?>
-   <h2 class="center">Parkings</h2>
+   <h2 class="center">Classement des parkings les moins utilisés</h2>
      <?php
     include "connect.php"; /* Le fichier connect.php contient les identifiants de connexion */
      ?>
@@ -25,7 +25,7 @@
                 $requete = file_get_contents("sql/requests/stats/parkings_moins_utilises.sql");
                 /* Si l'execution est reussie... */
                 $res = pg_query($connection, $requete);
-                $i = 0;
+                $i = 1;
                 if($res) {
                     /* ... on récupère un tableau stockant le résultat */
                       while ($parking =  pg_fetch_assoc($res)) {

@@ -9,7 +9,7 @@
 <?php include("template/header.php"); ?>
  <body>
  <?php include("template/navbar.php"); ?>
-   <h2 class="center">Liste de places disponibles par parking à un moment donnée</h2>
+   <h2 class="center">Liste de places disponibles par parking à un moment donné</h2>
      <?php
     include "connect.php"; /* Le fichier connect.php contient les identifiants de connexion */
      ?>
@@ -40,10 +40,12 @@
                       </select>
                       <label>Choisir un nom de parking</label>
                   </div>
-                  <div class="input-field col s12">    
+                  <div class="input-field col s12"> 
+                    <p>Date</p>   
                     <input type="text" name="date" class="datepicker">
                   </div>
-                  <div class="input-field col s12">    
+                  <div class="input-field col s12">
+                    <p>Heure</p>    
                     <input type="text" name="time" class="timepicker">
                   </div>
                 </div>

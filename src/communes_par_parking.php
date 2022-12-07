@@ -9,7 +9,7 @@
 <?php include("template/header.php"); ?>
  <body>
  <?php include("template/navbar.php"); ?>
-   <h2 class="center">Association Parking/Commune</h2>
+   <h2 class="center">Noms de commune par parking</h2>
      <?php
     include "connect.php"; /* Le fichier connect.php contient les identifiants de connexion */
      ?>

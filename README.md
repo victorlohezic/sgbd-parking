@@ -113,9 +113,9 @@ Pour les connaître, écrivez : `./make.sh help` dans votre terminal. Il faut ê
 Les différents paramètres sont résumés dans ce tableau :
 | Paramètre  |  Utilité |
 | :--------------- | :-----|
-| create  |     Crée la base de donnée |
-| add_data  |   Ajoute des données à la base de donnée |
-| clean  |    Supprime la base de donnée |
+| create  |     Crée la base de données |
+| add_data  |   Ajoute des données à la base de données |
+| clean  |    Supprime les tables de la base de données |
 | reset | Exécute clean, create et add_data |
 | select  |   Exécute les requêtes de consultation et statistiques |
 | consult  |   Exécute les requêtes de consultation |

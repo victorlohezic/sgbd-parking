@@ -25,8 +25,8 @@
         }
       ?>
       <form method="post" class="i col s8 offset-s2">
-                  <div class="row">
-                    <div class="input-field col s12">
+        <div class="row">
+                    <div class="input-field col s6">
                         <select name="old_name">
                           <?php
                             $requete = "select distinct NOM_PARKING from PARKING order by NOM_PARKING";
@@ -39,11 +39,11 @@
                         </select>
                         <label>Choisir un nom de parking</label>
                     </div>
-                      <div class="input-field col s12">
-                        <input name="new_name"  id="nom" type="text" class="validate">
-                        <label for="new_name">Nouveau nom de parking</label>
-                      </div>
-                  </div>
+                    <div class="input-field col s6">
+                      <input name="new_name"  id="new_name" type="text" class="validate">
+                      <label for="new_name">Nouveau nom de parking</label>
+                    </div>
+                    </div>
                       <div class="col s12">
                           <button type="submit" name="submit" class="btn-jtb">
                               Modifier nom du parking

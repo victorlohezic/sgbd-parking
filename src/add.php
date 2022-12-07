@@ -27,23 +27,23 @@
     <div class="container">
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="add_commune.php" class="btn-jtb"> Communes </a>
+                <a href="/add_commune.php" class="btn-jtb"> Communes </a>
             </div>
             <div class="col s3 center">
-                <a onClick="add_parking.php" class="btn-jtb"> Parkings </a>
+                <a href="/add_parking.php" class="btn-jtb"> Parkings </a>
             </div>
         </div>
         <div class="row">
             <div class="col s3 offset-s3 center">
-                <a onClick="add_vehicule.php" class="btn-jtb"> Vehicules </a>
+                <a href="/add_vehicule.php" class="btn-jtb"> Vehicules </a>
             </div>
             <div class="col s3 center">
-                <a onClick="add_place.php" class="btn-jtb"> Places </a>
+                <a href="/add_place.php" class="btn-jtb"> Places </a>
             </div>
         </div>
         <div class="row">
             <div class="col s6 offset-s3 center">
-                <a onClick="add_ticket.php" class="btn-jtb"> Tickets </a>
+                <a href="/add_ticket.php" class="btn-jtb"> Tickets </a>
             </div>
         </div>  
     </div>

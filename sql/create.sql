@@ -126,9 +126,16 @@ create TRIGGER SUPPRESSION_VEHICULE before delete on VEHICULE
 create or replace procedure rename(oldname VARCHAR, newname VARCHAR)
 LANGUAGE plpgsql
 as $$
+declare nombre_parking_avec_le_nouveau_nom integer;
 begin
-update PARKING
-set NOM_PARKING=newname
-where NOM_PARKING=oldname;
+	select count(ID_PARKING) into nombre_parking_avec_le_nouveau_nom from PARKING 
+	natural join COMMUNE
+	where NOM_PARKING = newname and ID_COMMUNE in (select ID_COMMUNE from COMMUNE natural join PARKING where NOM_PARKING=newname);
+	if nombre_parking_avec_le_nouveau_nom > 0 then
+		raise EXCEPTION 'un parking possède déjà ce nom dans la commune';
+	end if;
+	update PARKING
+	set NOM_PARKING=newname
+	where NOM_PARKING=oldname;
 end
 $$;

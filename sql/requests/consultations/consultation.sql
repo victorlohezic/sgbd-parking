@@ -1,6 +1,9 @@
 -- ============================================================
 --    Consultation
 -- ============================================================
+select count(ID_PARKING) from PARKING 
+	natural join COMMUNE
+	where NOM_PARKING = 'Village 1' and ID_COMMUNE in (select ID_COMMUNE from COMMUNE natural join PARKING where NOM_PARKING='Village 1');
 
 -- Informations sur les parkings
 select *

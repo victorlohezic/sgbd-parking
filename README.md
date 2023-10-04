@@ -1,4 +1,4 @@
-# Projet de Base de Donnée
+# Projet de Base de Données
 
 ## Installation de la base de données PostgreSQL 
 ------------------------
